@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificación de Reserva</title>
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#111;
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
+}
+
+.card{
+background:#1f1f1f;
+padding:30px;
+border-radius:20px;
+width:90%;
+max-width:400px;
+text-align:center;
+box-shadow:0 0 20px rgba(0,255,100,.3);
+}
+
+h1{
+color:#00ff80;
+}
+
+.codigo{
+font-size:24px;
+font-weight:bold;
+color:#ffd700;
+margin:15px 0;
+}
+
+.estado{
+color:#00ff80;
+font-size:20px;
+font-weight:bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>JK Tickets Argentina</h1>
+
+<h2>Reserva verificada</h2>
+
+<p class="codigo" id="codigo">JK-2026-0001</p>
+
+<p>🎤 Jere Klein</p>
+
+<p>📍 Teatro Ópera - Buenos Aires</p>
+
+<p>💺 Platea Central - Asientos 11 y 12</p>
+
+<p class="estado">✅ PAGADO</p>
+
+<p>Gracias por confiar en JK Tickets Argentina.</p>
+
+</div>
+
+<script>
+const params=new URLSearchParams(window.location.search);
+const codigo=params.get("codigo");
+if(codigo){
+document.getElementById("codigo").innerText=codigo;
+}
+</script>
+
+</body>
+                                                 </html>
